@@ -1,0 +1,65 @@
+@mixin px($px) {
+	padding-left: $px;
+	padding-right: $px;
+}
+
+@mixin py($py) {
+	padding-top: $py;
+	padding-bottom: $py;
+}
+
+.card1 {
+    background: #fff;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 14px 30px 0 #0000002e;
+  border-radius:20px;
+    width: 300px;
+  
+  &:hover &-image{
+    transform:translatey(10px)
+  }
+
+    &-image {
+        width: 150px;
+        height: 150px;
+        margin-top: -62px;
+      object-fit:cover;
+      border-radius:20px;
+      transition:transform .4s;
+    }
+
+    &-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    &-price {
+        margin-bottom: 16px;
+
+        span {
+            text-decoration: line-through;
+            font-size: 12px;
+            color: #2021246b;
+            margin-left: 20px;
+        }
+    }
+
+    &-action {
+      width:100%;
+        @include py(12px);
+        @include px(30px);
+        background-color: #ffa058;
+        color: #fff;
+        border-radius: 10px;
+        font-weight: bold;
+
+        &:hover {
+            background-color: lighten(#A054C6, 10);
+        }
+    }
+
+
+}
